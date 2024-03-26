@@ -5,6 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 You can visit the site at: https://wg-spacecoder.github.io/bar-chart-test/
 
 To deploy this site to github pages use:
+
 ```ng deploy --base-href="https://wg-spacecoder.github.io/bar-chart-test/"```
 
 ## TODOS
@@ -16,6 +17,7 @@ This app was built without using a chart library or any other external library o
   <li>Give table links</li>
   <li>Refactor components to have better naming</li>
   <li>N/A for unavilable fields</li>
+  <li>Testing (unit and e2e)</li>
 </ol>
 
 ## Development server
