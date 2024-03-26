@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
 
+## TODOS
+
+This app was built without using a chart library or any other external library on purpose as a challenge. I would do a few things differently given more time. I would make the table sticky and have some of the fields be links as there is a link provided. I would have the table be scrollable with a sticky header as the page can get really quite long where you are far from the header. I would either use a chat library or finesse the chart a bit more to have it scale better. I would rename some of the components to be better named as I started not fully understanding the type of data I was consuming and displaying. 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

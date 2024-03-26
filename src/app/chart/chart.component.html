@@ -1,0 +1,32 @@
+<div *ngIf="isLoading">
+    Gathering data...
+</div>
+<div class="wrapper" *ngIf="!isLoading">
+    <!-- button kindof unneccessary, but it works -->
+    <div class="refresh-wrapper">
+        <button class="refresh" (click)="refreshData()">Refresh Data</button>
+    </div>
+    
+    <app-bar-chart (monthClickEvent)="displayByMonth($event)"></app-bar-chart>    
+
+    <table *ngIf="monthToDisplay != undefined">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Organization</th>
+                <th>Location</th>
+                <th>Date Published</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let job of showJobs">
+                <td>{{job.websiteTitle}}</td>
+                <td>{{job.websiteJobFunction}}</td>
+                <td>{{job.websiteOrganization}}</td>
+                <td>{{job.websiteLocation}}</td>
+                <td>{{getDate(job.websiteDatePublished) | date: 'shortDate'}}</td>
+            </tr>
+        </tbody>
+    </table>
+  </div>

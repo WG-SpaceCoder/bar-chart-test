@@ -1,0 +1,37 @@
+.chart-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-end;
+    
+    .month{
+        flex: 1;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        cursor: pointer;
+    }
+    .month:hover {
+        background-color: #00ffcc43;
+    }
+    .bar {
+        background-color: #009879;
+        &.selected {
+            background-color: #002e2a;
+        }
+    }
+    .label {
+        margin-top: 3px;
+    }
+    .long {
+        @media (max-width:959px) {
+            display: none;
+        }
+    }
+    .short {
+        @media (min-width:960px) {
+            display: none;
+        }
+    }
+}

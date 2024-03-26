@@ -1,0 +1,8 @@
+<div class="chart-container">
+    <div *ngFor="let month of months" class="month" (click)="monthClicked(month)">
+        {{dataByMonth[month].length}}
+        <div class="bar" [class.selected]="selectedMonth === month" [ngStyle]="{'height': (dataByMonth[month].length / topHeight)*100 +'%'}"></div>
+        <div class="label long">{{getMonthName(month)}}</div>
+        <div class="label short">{{getMonthName(month).substr(0,3)}}</div>
+    </div>
+</div>
