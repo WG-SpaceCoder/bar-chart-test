@@ -7,6 +7,9 @@
 
     // Definitely not a workaround to make all the bars even...
     font-family: 'Courier New', monospace;
+    @media (max-width:959px) {
+        margin: 0;
+    }
 }
 
 .refresh-wrapper {
