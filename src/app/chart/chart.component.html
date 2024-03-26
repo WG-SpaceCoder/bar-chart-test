@@ -29,4 +29,26 @@
             </tr>
         </tbody>
     </table>
+
+    <div class="mobile-table" *ngIf="monthToDisplay != undefined">
+        <div *ngFor="let job of showJobs" class="job">
+            <div class="head">{{job.websiteTitle}}</div>
+            <div class="group">
+                <div class="title">Description</div>
+                <div class="data">{{job.websiteJobFunction}}</div>
+            </div>
+            <div class="group">
+                <div class="title">Organization</div>
+                <div class="data">{{job.websiteOrganization}}</div>
+            </div>
+            <div class="group">
+                <div class="title">Location</div>
+                <div class="data">{{job.websiteLocation}}</div>
+            </div>
+            <div class="group">
+                <div class="title">Date Published</div>
+                <div class="data">{{getDate(job.websiteDatePublished) | date: 'shortDate'}}</div>
+            </div>
+        </div>
+    </div>
   </div>

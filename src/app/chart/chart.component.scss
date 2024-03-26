@@ -7,7 +7,7 @@
 
     // Definitely not a workaround to make all the bars even...
     font-family: 'Courier New', monospace;
-    @media (max-width:959px) {
+    @media (max-width:600px) {
         margin: 0;
     }
 }
@@ -15,6 +15,56 @@
 .refresh-wrapper {
     .refresh {
         float: right;
+    }
+}
+
+.mobile-table {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
+    // margin: 20px;
+    @media (max-width:600px) {
+        margin: 0;
+    }
+    
+    @media (min-width:960px) {
+        display: none;
+    }
+
+    .job {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 2px solid #009879;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px; 
+        
+        .head {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px; 
+            padding: 10px;
+        }
+        .group {
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+            .title{
+                flex:20;
+            }
+            .data {
+                flex: 80;
+            }
+        }
+        .group:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
     }
 }
 
@@ -28,6 +78,10 @@ table {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px; 
     position: relative;
+
+    @media (max-width:959px) {
+        display: none;
+    }
 
     tr:first-child th:first-child { 
         border-top-left-radius: 10px; 
